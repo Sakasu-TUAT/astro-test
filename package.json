@@ -10,6 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.8.0"
+    "astro": "^2.8.0",
+    "newt-client-js": "^3.2.4"
+  },
+  "devDependencies": {
+    "sass": "^1.63.6"
   }
 }
