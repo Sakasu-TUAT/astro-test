@@ -1,9 +1,9 @@
 import { createClient } from "newt-client-js";
 
 export interface Article {
-    title: string;
-    slug: string;
-    body: string;
+    title: string
+    slug: string
+    body: string
 }
 
 export const newtClient = createClient({

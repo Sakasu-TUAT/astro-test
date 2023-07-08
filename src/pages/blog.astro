@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/algo.scss';
+import { newtClient } from '../lib/newt';
+import type {Article} from '../lib/newt';
+
+const { items: articles } = await newtClient.getContents<Article>({
+    appUid: 'astro_blog',
+    modelUid: 'article',
+    query: {
+        select: ['title', 'slug', 'body'],
+    }
+})
+---
+
+<Layout title="Articles">
+    <main>
+        <div class="article">
+            <h1>精進日誌</h1>
+
+            <ul>
+                {
+                    articles.map((article) => {
+                        return (
+                            <li>
+                                <a href={`/articles/${encodeURIComponent(article.slug)}`}>{article.title}</a>
+                            </li>
+                        )
+                    })
+                }
+            </ul>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    .article {
+        position: relative;
+        margin-left: 0%;
+        margin-top: 30%;
+        text-align: center;
+        color-scheme: light dark;
+        color: white;
+    }
+</style>

@@ -1,10 +1,27 @@
 ---
 import Layout from '../layouts/Layout.astro';
- import Main from '../layouts/Main.astro';
+import '../styles/style.scss';
 ---
 
-<Layout title="タイトル">
-	<Main>
-		<p>Main</p>
-	</Main>
+<Layout title="Home">
+    <canvas id="myCanvas"></canvas>
+    <div class="hero">
+        <h1>The Earth</h1>
+        <p>
+           地球を回せ、工学部。
+           <!-- \begin{align}
+           F(\omega) = \cfrac{1}{\sqrt{2\pi}}\int_{-\infty}^{+\infty}f(t)e^{i\omega t}dt
+           \end{align} -->
+        </p>
+        <button>Go Space</button>
+    </div>
+
+    <script
+       src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+       integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ=="
+       crossorigin="anonymous"
+       referrerpolicy="no-referrer"
+     ></script>
+
+    <script src="./main.js"></script>
 </Layout>
