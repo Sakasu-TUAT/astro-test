@@ -1,67 +1,37 @@
-@import "./_common";
-
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-body {
-    background-color: $mainColor;
-}
-
-.article {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.hero {
-    text-align: center;
+.heading h2 {
     position: absolute;
     top: 15%;
-    left: 50%;
-    transform: translate(-50%, -15%); /*中央寄せ*/
-    color: aliceblue;
-    width: 100%;
-}
-
-.hero h1 {
-    font-size: 2rem;
-    font-weight: 400;
-    margin: 0;
-}
-
-section.algorithm-list {
-    position: absolute;
-    top: 40%;
     left: 50%;
     transform: translate(-50%, -20%);
     color: white;
     text-align: left;
     width: 90%; /* 幅を100%に設定 */
+    color: #ffffff;/*文字色*/
+    background: transparent;/*背景透明に*/
+    z-index: 1;
 }
 
-.algorithm-list h2 {
+.heading h2 {
     padding: 0.5em 0.5em;/*上下 左右の余白*/
     color: #ffffff;/*文字色*/
     background: transparent;/*背景透明に*/
     margin-top: 10px; 
     margin-bottom: 10px;
     border-left: solid 5px #7db4e6;/*左線*/
-    // border-bottom: solid 3px #d7d7d7;/*下線*/ 
+    border-bottom: solid 3px #d7d7d7;/*下線*/ 
 }
 
-.algorithm-list h3 {
+.heading h2{
     font-size: 1.5rem;
     margin-top: 15px; 
     margin-bottom: 15px;
     border-bottom: solid 3px skyblue;
-    position: relative;
+    // position: relative;
+    color: #ffffff;
+    z-index: 2;
 }
 
-.algorithm-list h3:after {
+.heading h2:after {
     position: absolute;
     content: " ";
     display: block;
@@ -71,11 +41,13 @@ section.algorithm-list {
 }
 
 
-.algorithm-list ol {
+.heading ol {
     list-style: none; /* リストのマーカーを非表示 */
     padding-left: 0; /* 左の余白を削除 */
+    color: #ffffff;
 }
 
-.algorithm-list ol li {
+.heading ol li {
     padding-left: 20px; /* 左の余白を追加 */
+  
 }
