@@ -1,0 +1,64 @@
+@import "./_common";
+@import "./article_header";
+
+.container {
+    position: relative;
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-bottom: 100px;
+}
+.container img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.article-body {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+    color-scheme: light dark;
+    color: rgb(255, 255, 255);
+    height: calc(100vh);
+    margin-bottom: 100px;
+    overflow: auto;
+}  
+
+.article-body h2 {
+    color : rgb(255, 238, 0);
+    margin-top: 3rem;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    @extend .generic-class-h2;
+}
+
+.article-body h3 {
+    color : rgb(249, 249, 249);
+    font-size: 1.6rem;
+    @extend .generic-class-h3;
+}
+.article-body h3:after {
+    @extend .generic-class-h3-after;
+}
+
+.article-body ul {
+    color : rgb(240, 240, 236);
+}
+
+.article-body p {
+    color : rgb(237, 243, 243);
+    margin-top: 3rem;
+    font-size: 1.0rem;
+    line-height: 1.8;
+}
+
+
+

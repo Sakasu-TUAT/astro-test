@@ -1,115 +1,57 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import '../styles/algo.scss';
-import '../styles/_article_header.scss';
+import '../styles/_blog_pages.scss';
 import { newtClient } from '../lib/newt';
 import type {Article} from '../lib/newt';
+import { getFormattedDate } from '../utils/formatDate';
+import Icons from '../components/sns_icons.astro';
 
 const { items: articles } = await newtClient.getContents<Article>({
     appUid: 'astro_blog',
     modelUid: 'article',
     query: {
-        select: ['title', 'slug', 'body'],
+        select: ['_id', '_sys', 'title', 'slug', 'meta', 'body', 'coverImage', 'author', 'tags'],
     }
 })
 ---
 
+
 <Layout title="Articles">
-    <main>
-
-        <div class="heading">
-            <h2>最新の投稿</h2>
-        </div>
-        
-
+        <div class="heading">最新の投稿</div>
         <div class="article">
             <div class="blog-card-container">
-            {
-                articles.map((article) => {
-                    return (
-                        <div class="blog-card">
-                        <img src='earthmap1k.jpg' alt={article.title} class="blog-card-image" />
-                        <div class="blog-card-content">
-                            <h2 class="blog-card-title">{article.title}</h2>
-                            <p class="blog-card-description">ブログ記事の要約や説明文</p>
-                            <a href={`/articles/${encodeURIComponent(article.slug)}`} class="blog-card-link">続きを読む</a>
-                        </div>
-                        </div>
-                    );
-            })}
+                {
+                    articles.map((article) => {
+                        return (
+                            <a class="blog-card" href={`/articles/${article.slug}`}> 
+                                <img src={article.coverImage?.src || '/programming-school-comparison.webp'}
+                                alt={article.title}  alt={article.title} class="blog-card-image" /> 
+                                <div class="blog-card-content">
+                                    <p>{getFormattedDate(article._sys.raw.firstPublishedAt)}</p>
+                                    <h2 class="blog-card-title">{article.title.replace(/<[^>]+>/g, '').substring(0, 30)+' ...'}</h2>
+                                    <p class="blog-card-description">{
+                                        article.body.replace(/<[^>]+>/g, '').substring(0, 30)+' ...'
+                                    }</p>
+                                    <div class="blog-card-link">続きを読む</div>
+                                </div>
+                            </a>
+                            
+                        );
+                })}
             </div>
+   
+        <!-- </div>        
+        </div> -->
+            <div class="icons">
+                <Icons />
+            </div> 
+    
         </div>
-    </main>
+ 
 </Layout>
 
 <style>
-    main {
-        padding-bottom: 100px; /* フッターの高さ以上の余白を確保 */
+    icons {
+        text-decoration-color: rgb(146, 23, 23);
     }
-
-    .article {
-        margin-left: 0%;
-        margin-bottom: 10%;
-        margin-top: 200px;
-        text-align: center;
-        color-scheme: light dark;
-        color: rgb(255, 255, 255);
-    }
-
-    .blog-card-container {
-        display: flex;
-        flex-wrap: wrap; /* 必要に応じて改行を行う */
-        gap: 20px; /* ブログカード間の間隔 */
-        height: auto; /* 高さを自動調整 */
-        /* overflow: hidden; ブログカードがコンテナからはみ出る場合には隠す */
-        overflow: auto; 
-        z-index: 10px;
-        margin-left: 2%;
-        margin-right: 2%;
-    }
-
-
-    .blog-card {
-        margin-top: 10px;
-        width: 42%; /* ブログカードの幅を半分に設定 */
-        display: flex;
-        align-items: center;
-        background-color: #0e5364;
-        border-radius: 8px;
-        padding: 16px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        margin-left: 2%;
-
-    }
-
-    .blog-card img {
-        width: 120px;
-        height: 120px;
-        object-fit: cover;
-        border-radius: 4px;
-        margin-right: 16px;
-    }
-
-    .blog-card-content {
-        flex: 1;
-    }
-
-    .blog-card-title {
-        font-size: 18px;
-        margin-bottom: 8px;
-    }
-
-    .blog-card-description {
-        font-size: 14px;
-        color: #e5e5e5;
-        margin-bottom: 8px;
-    }
-
-    .blog-card-link {
-        display: inline-block;
-        font-size: 14px;
-        color: #eeff00;
-        text-decoration: none;
-    }
-
 </style>

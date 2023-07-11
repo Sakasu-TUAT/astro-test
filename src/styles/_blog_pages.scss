@@ -1,0 +1,98 @@
+@import  "./_common";
+@import "./article_header";
+
+main {
+    padding-bottom: 200px; /* フッターの高さ以上の余白を確保 */
+}
+
+body {
+    margin: 0px;
+    background-color: black;
+}
+
+.heading {
+    position: relative;
+    text-align: center;
+    margin-top: 100px;
+    font-size: 2.0rem;
+    color:#e5e5e5;
+    color: #ffffff;/*文字色*/
+    background: transparent;/*背景透明に*/
+    border-bottom: 3px solid #3eeded ;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.article {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2%;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    text-align: center;
+    color-scheme: light dark;
+    color: rgb(255, 255, 255);
+    overflow: auto;
+}
+
+.blog-card-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap; /* 必要に応じて改行を行う */
+    gap: 20px; /* ブログカード間の間隔 */
+    color: rgb(255, 255, 255);
+    margin-bottom: 100px;
+}
+
+.blog-card {
+    margin-top: 10px;
+    width: 40%; /* ブログカードの幅を半分に設定 */
+    display: flex;
+    align-items: center;
+    background-color: #0e5364;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 2%;
+    border: 2px solid rgb(61, 146, 207);
+    text-decoration:none;
+}
+
+.blog-card:hover {
+    border: 3px solid yellow;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.blog-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 16px;
+}
+
+.blog-card-content {
+    color: #e5e5e5;
+    flex: 1;
+}
+
+.blog-card-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.blog-card-description {
+    font-size: 14px;
+    color: #e5e5e5;
+    margin-bottom: 8px;
+}
+
+.blog-card-link {
+    display: inline-block;
+    font-size: 14px;
+    color: #eeff00;
+    text-decoration: none;
+    
+}
