@@ -1,7 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import '../styles/algo.scss';
-
+import SimpleIcons from '../components/sns_icons_simple.astro';
+// import { Toggle } from '../components/Toggle.ts';
 ---
 <Layout title="algo">
     <main>
@@ -26,9 +27,26 @@ import '../styles/algo.scss';
                     <li><a href="algorithm1.html">アルゴリズム1の説明</a></li>
                     <li><a href="algorithm2.html">アルゴリズム2の説明</a></li>
                     <li><a href="algorithm3.html">アルゴリズム3の説明</a></li>
-                    <!-- 追加のアルゴリズムをここに追記 -->
                 </ol>
             </section>
         </div>
+        <SimpleIcons />
     </main>
 </Layout>
+
+<style> 
+    .toggle-button {
+        background-color: #ffffff;
+        position: absolute;
+        border: none;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        outline: none;
+        position: absolute;
+        top: 150px;
+        left: 50%;
+
+        
+        z-index: 1;
+    }
+</style> 
