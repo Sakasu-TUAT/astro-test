@@ -1,3 +1,6 @@
+if (typeof window !== "undefined") {
+  // Client-side-only code
+
 window.addEventListener('load', init);
 
 function init(){
@@ -111,6 +114,5 @@ function init(){
         requestAnimationFrame(tick);
     }
 
-
-
+}
 }
