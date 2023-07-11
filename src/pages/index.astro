@@ -23,5 +23,9 @@ import '../styles/style.scss';
        referrerpolicy="no-referrer"
      ></script>
 
-    <script src="./main.js"></script>
+     <astro client:only>
+        <script src="./main.js"></script>
+     </astro>
+
+    
 </Layout>
