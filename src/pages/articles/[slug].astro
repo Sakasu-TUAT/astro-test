@@ -58,17 +58,12 @@ const { title, text } = page;
 <Layout title="Article">
     <div class="container">
     <title>{title}</title>
-        <h1>{title}</h1>
-        <p>{text}</p>
-        <article> article.title </article>
-
-
-        <!-- <h1>{ article.title }</h1> -->
-        <!-- <img src={article.coverImage?.src || '/programming-school-comparison.webp'} alt={article.title} /> --> -->
-        <!-- <div class="article-body"> -->
-            <!-- <article set:html={article.body} /> -->
-        <!-- <div> -->
-            ああ
+    
+        <h1>{ article.title }</h1>
+        <img src={article.coverImage?.src || '/programming-school-comparison.webp'} alt={article.title} /> -->
+        <div class="article-body">
+            <article set:html={article.body} />
+        <div>
     </div>
 </Layout> 
 
