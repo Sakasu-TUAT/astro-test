@@ -41,45 +41,60 @@ body {
     position: relative;
     display: flex;
     flex-wrap: wrap; /* 必要に応じて改行を行う */
-    gap: 20px; /* ブログカード間の間隔 */
+    gap: 25px; /* ブログカード間の間隔 */
     color: rgb(255, 255, 255);
     margin-bottom: 100px;
+    margin-top: 10px;
 }
 
 .blog-card {
-    margin-top: 10px;
-    width: 40%; /* ブログカードの幅を半分に設定 */
+    position: relative;
+    width: 70vw;
     display: flex;
-    align-items: center;
-    background-color: #0e5364;
+    // align-items: center;
+    background-color: #01588f;
+    // background-color:  #0e5364;;
     border-radius: 8px;
-    padding: 16px;
+    padding: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-left: 2%;
     border: 2px solid rgb(61, 146, 207);
     text-decoration:none;
+    margin:0 auto; 
+    transition:1s all;
 }
 
 .blog-card:hover {
     border: 3px solid yellow;
     transition: border-color 0.2s ease-in-out;
+    transform:scale(1.1,1.1);
+    transition:0.5s all;
 }
 
 .blog-card img {
-    width: 120px;
-    height: 120px;
+    width: 30vw;
+    height: 25vh;
     object-fit: cover;
     border-radius: 4px;
-    margin-right: 16px;
+    // margin-right: 16px;
+    margin: 10px;
 }
 
 .blog-card-content {
     color: #e5e5e5;
     flex: 1;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.blog-card .fa-tags {
+    color: #ffffff;
+    margin-left: 5px;
+    font-size: 0.8rem;
+
 }
 
 .blog-card-title {
-    font-size: 18px;
+    font-size: 24px;
     margin-bottom: 8px;
 }
 
@@ -94,5 +109,6 @@ body {
     font-size: 14px;
     color: #eeff00;
     text-decoration: none;
-    
+    border-bottom: 1px solid #eeff00;
+    text-align: right; /* 文字を中央揃えにする */
 }

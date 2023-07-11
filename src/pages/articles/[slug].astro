@@ -2,8 +2,11 @@
 import Layout from "../../layouts/Layout.astro";
 import { newtClient } from "../../lib/newt"; 
 import type { Article } from "../../lib/newt";
+import SimpleIcons from "../../components/sns_icons_simple.astro"; 
 import '../../styles/algo.scss';
 import '../../styles/_article.scss';
+import '../../styles/_sns_icons_simple.scss';
+import { getFormattedDate } from '../../utils/formatDate';
 
 export const getStaticPaths = async () => {
     const { items: articles } = await newtClient.getContents<Article>({
@@ -35,35 +38,35 @@ export const getArticleBySlug = async (slug: string) => {
 
 const { article } = Astro.props;
 
-const pages = [
-  {
-    slug: 'icpc_yosen',
-    title: 'Astro products',
-    text: 'We have lots of products for you',
-  },
-  {
-    slug: 'products/astro-handbook',
-    title: 'The ultimate Astro handbook',
-    text: 'If you want to learn Astro, you must read this book.',
-  }
-];
-
-const { slug } = Astro.params;
-const page = pages.find((page) => page.slug === slug);
-if (!page) return Astro.redirect("/404");
-const { title, text } = page;
 ---
-
-
 <Layout title="Article">
-    <div class="container">
-    <title>{title}</title>
-    
+    <div class="container">    
         <h1>{ article.title }</h1>
-        <img src={article.coverImage?.src || '/programming-school-comparison.webp'} alt={article.title} /> -->
+
+        <div class="tags">
+          <i class="fa fa-calendar"> {getFormattedDate(article._sys.raw.firstPublishedAt)}</i>
+          <i class="fa fa-tags"> {article.tags.map(tag => tag.name).join(', ')} </i>
+        </div>
+
+        <img src={article.coverImage?.src || '/programming-school-comparison.webp'} alt={article.title} /> 
         <div class="article-body">
             <article set:html={article.body} />
         <div>
     </div>
+    <SimpleIcons />
 </Layout> 
 
+<style>
+  .tags {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin :1rem;
+  }
+  .fa-calendar {
+    margin-right: 0.5rem;
+  }
+  .fa-tags {
+    margin-right: 0.5rem;
+  }
+</style>
