@@ -132,15 +132,16 @@ body {
         background-color: #01588f;
         // background-color:  #0e5364;;
         border-radius: 8px;
-        padding: 0px;
+        padding: 2px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         border: 2px solid rgb(61, 146, 207);
         text-decoration:none;
         transition:1s all;
     }
     .blog-card img {
-        width: 120px;
-        height: 100px;
+        width: 100px;
+        height: 90px;
+        border: 2px solid rgb(130, 162, 205);
     }
     .blog-card-title {
         font-size: 18px;
