@@ -39,13 +39,22 @@ canvas {
   font-weight: 1000;
 }
 
-
 .hero h1 {
     font-size: 5rem;
     font-weight: 400;
     margin: 0;
 }
 
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 4rem;
+        font-weight: 400;
+        margin: 0;
+    }
+    .hero p {
+        font-size: 2.5rem;
+    }
+}
 
 .hero button{
     color: white;

@@ -17,6 +17,11 @@ header h2 {
     font-weight: 400;
     margin: 0;
 }
+@media (max-width: 600px) {
+    header h2 {
+        font-size: 1.5rem;
+    }
+}
 
 header ul {
     font-size: 20px;
@@ -26,8 +31,9 @@ header ul {
 
 header ul a {
     color:white;
-    text-decoration: none; /*_削除*/
-    margin: 0 20px; /*上下の余白を0, 左右の余白を10px*/
-    display: inline-block; /*インライン要素をブロック要素に変更*/
+    text-decoration: none; 
+    margin: 0 20px; 
+    display: inline-block; 
+    
 }
 
