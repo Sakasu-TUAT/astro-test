@@ -41,9 +41,10 @@ body {
 }
 
 section.algorithm-list {
-    position: absolute;
-    top: 40%;
+    position: relative;
+    margin-top: 300px;
     left: 50%;
+
     transform: translate(-50%, -20%);
     color: white;
     text-align: left;
