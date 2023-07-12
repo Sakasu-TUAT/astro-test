@@ -51,7 +51,7 @@ body {
     position: relative;
     width: 70vw;
     display: flex;
-    // align-items: center;
+    align-items: center;
     background-color: #01588f;
     // background-color:  #0e5364;;
     border-radius: 8px;
@@ -72,10 +72,9 @@ body {
 
 .blog-card img {
     width: 30vw;
-    height: 25vh;
+    height:max(30vh, 150px);
     object-fit: cover;
     border-radius: 4px;
-    // margin-right: 16px;
     margin: 10px;
 }
 
