@@ -7,15 +7,18 @@
     margin-left: 5%;
     margin-right: 5%;
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     margin-bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70vw;
 }
 .container img {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     width: 80%;
-    height: 30%;
+    height: 20%;
     display: flex;
     justify-content: center;
     align-items: center;

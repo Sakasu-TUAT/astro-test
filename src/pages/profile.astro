@@ -9,11 +9,46 @@ import SimpleIcons from '../components/sns_icons_simple.astro';
     <div class="container">
         <h1>Under Construction</h1>
         <h1>Comming Soon !!</h1>
-    </div>
-    <SimpleIcons />
-</Layout>
+        <div class="historical-temperature-container">
+            <!----><a class="forecast-history-link" 
+            target="_blank" 
+            data-t="{&quot;n&quot;:&quot;recordsPageLink&quot;,&quot;a&quot;:&quot;click&quot;,&quot;b&quot;:1}" 
+            href="https://www.msn.com/ja-jp/weather/records/in-%E6%9D%B1%E4%BA%AC%E9%83%BD,%E7%9B%AE%E9%BB%92%E5%8C%BA?loc=eyJsIjoi55uu6buS5Yy6IiwiciI6IuadseS6rOmDvSIsImMiOiLml6XmnKwiLCJpIjoiSlAiLCJnIjoiamEtanAiLCJ4IjoiMTM5LjY2OTI5NjI2NDY0ODQ0IiwieSI6IjM1LjYxODY4NjY3NjAyNTM5In0%3D&amp;weadegreetype=C&amp;ocid=msedgntp&amp;cvid=9794b615734945d7803626a1d29eba50&amp;ei=51">
+        </a> <!---->
 
+        <div class="container-title">
+            <span>7月14日 の気温の記録</span>
+            <svg width="7" height="14px" viewBox="0 0 7 12" xmlns="http://www.w3.org/2000/svg" 
+            class="inline-DS-EntryPoint1-1">
+            <path d="M0.528512 0.861886C0.268165 1.12224 0.268165 1.54435 0.528512 1.8047L4.72379 5.99996L0.528512 10.1952C0.268165 10.4556 0.268165 10.8777 0.528512 11.138C0.788865 11.3984 1.21097 11.3984 1.47133 11.138L6.13799 6.47136C6.39832 6.21103 6.39832 5.78889 6.13799 5.52856L1.47133 0.861886C1.21097 0.601539 0.788865 0.601539 0.528512 0.861886Z" fill="white">
+                </path></svg></div> <!----><div class="container-content">
+                    <img src="https://assets.msn.com/weathermapdata/1/static/background/aurora/temperature_record.svg"><!---->
+                <div class="tempItem" style="top:119px">
+                <div class="tempItem-content">
+                    <div class="labelFontUpper">過去最低気温</div><!---->
+                    <div class="valueFont">
+                    <div style="direction: ltr">19°</div>
+                    &nbsp;<!---->(1998)</div></div></div></div> <!---->
+                    <div class="tempItem" style="top:96px">
+                    <div class="tempItem-content">
+                    <div class="tempItem-content-container">
+                    <div class="labelFontUpper">平均最低気温</div>
+                    <!----><div class="valueFont">
+                    <div style="direction: ltr">24°</div></div></div></div></div> <!---->
+                    <div class="tempItem" style="top:6px">
+                    <div class="tempItem-content"><div class="tempItem-content-container">
+                    <div class="labelFontUpper">過去最高気温</div><!---->
+                    <div class="valueFont"><div style="direction: ltr">36°</div>&nbsp;<!---->(2018)</div></div></div></div> <!----><div class="tempItem" style="top:32px"><div class="tempItem-content"><div class="tempItem-content-container"><div class="labelFontUpper">アベレージ ハイ</div><!----><div class="valueFont"><div style="direction: ltr">30°</div></div></div></div></div></div></div>
+                    <div class="tempItem-content-container">
+            </div>
+                                        
+            <SimpleIcons />
+        </Layout>
+                                    
 <style>
+    body {
+        background-color: #1e4267;
+    }
     .container {
         position: relative;
         margin: 30%;
@@ -25,5 +60,17 @@ import SimpleIcons from '../components/sns_icons_simple.astro';
 
     .container h1 + h1 {
         margin-top: 20px; /* 上側のマージンを20pxに設定 */
+    }
+
+    .historical-temperature-container {
+        position: relative;
+        width: 300px;
+        height: 270px;
+        background: rgba(255, 255, 255, 0.04);
+        border-radius: 8px;
+        padding: 12px 0px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
     }
 </style>
