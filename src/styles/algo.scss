@@ -32,6 +32,14 @@ body {
     font-weight: 400;
     margin-top: 10px;
 }
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 1.8rem;
+        font-weight: 400;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+}
 
 section.algorithm-list {
     position: absolute;
