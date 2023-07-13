@@ -6,7 +6,7 @@
 #social-platforms {
     text-align:center;
     background-color: rgb(0, 0, 0);
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 /*Pen code from this point on*/
@@ -21,7 +21,8 @@
   -webkit-transition:all .5s;
   -moz-transition:all .5s;
   transition:all .5s;
-  overflow:hidden
+  overflow:hidden;
+  margin-top: 20px;
 }
 
 .btn:hover {
