@@ -54,6 +54,7 @@
 
 .article-body ul {
     color : rgb(240, 240, 236);
+    // list-style-position: inside;
 }
 
 .article-body ul li{
@@ -63,10 +64,11 @@
 
 .article-body ul li::before {
     content: "";
+    
     display: inline-block;
     width: 0.5em;
     height: 0.5em;
-    background-color: rgb(93, 231, 91);
+    background-color: rgb(231, 149, 91);
     margin-right: 0.5em;
     margin-bottom: 0.1em;
     border-radius: 20%;
