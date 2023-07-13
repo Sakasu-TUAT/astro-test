@@ -93,7 +93,7 @@ function init(){
 
     //フレームごとに呼び出される関数
     function tick(){
-        rot += 0.05;
+        rot += 0.08;
         const radian = (rot * Math.PI) / 180;
         //角度に応じてカメラの位置を変更
         camera.position.x = 900 * Math.sin(radian);
