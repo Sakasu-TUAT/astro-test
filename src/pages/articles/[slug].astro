@@ -50,7 +50,7 @@ const { article } = Astro.props;
         <img src={article.coverImage?.src || '/programming-school-comparison.webp'} alt={article.title} /> 
         <div class="article-body">
             <article set:html={article.body} />
-        <div>
+        </div>
     </div>
     
     <SimpleIcons />

@@ -4,11 +4,12 @@
 /*Ignore me, I'm just page styling*/
 
 #social-platforms {
+    display: flex;
     justify-content: center;
     left: 50%;
     background-color: rgb(0, 0, 0);
     width: 100vw;
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 /*Pen code from this point on*/
