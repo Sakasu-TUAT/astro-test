@@ -57,6 +57,14 @@ nav li:last-child {
 
 
 @media (max-width: 767px) {
+    h2 {
+        color:rgb(255, 255, 255);
+        text-decoration: none; 
+        margin: 0 20px; 
+        display: inline-block; 
+        font-size: 1.7rem;
+    }
+    
     nav {
         position: fixed;
         width: 100%;
