@@ -79,7 +79,7 @@ nav li:last-child {
         top: 100px;
         left: -100vw;
         bottom: 0;
-        transition: all 0.5s;
+        transition: all 0.7s;
         z-index: 3;
         opacity: 0;
         justify-content: center; /* 水平方向の中央揃え */
@@ -144,7 +144,7 @@ nav li:last-child {
         width: 30px;
         height: 2px;
         background-color: #ffffff;
-        transition: all 0.5s;
+        transition: all 0.7s;
         border-radius: 4px;
     }
 
@@ -186,7 +186,7 @@ nav li:last-child {
         z-index: 2;
         cursor: pointer;
         backdrop-filter: blur(100vh);
-        transition: all 0.5s;
+        transition: all 0.7s;
     }
 
     .open #mask {
