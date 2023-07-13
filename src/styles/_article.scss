@@ -27,7 +27,6 @@
 .article-body {
     margin-top: 20px;
     margin-bottom: 10px;
-    font-size: 24px;
     text-align: left;
     color-scheme: light dark;
     color: rgb(255, 255, 255);
@@ -57,11 +56,31 @@
     color : rgb(240, 240, 236);
 }
 
+.article-body ul li{
+    color : rgb(240, 240, 236);
+    font-size: 1.1rem;
+}
+
+.article-body ul li::before {
+    content: "";
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    background-color: rgb(93, 231, 91);
+    margin-right: 0.5em;
+    margin-bottom: 0.1em;
+    border-radius: 20%;
+}
+  
 .article-body p {
     color : rgb(237, 243, 243);
     margin-top: 3rem;
-    font-size: 1.0rem;
+    font-size: 1.2rem;
     line-height: 1.8;
+}
+
+.article-body *{
+    font-size: 24px;
 }
 
 
