@@ -12,28 +12,177 @@ header {
     z-index: 100;
 }
 
-header h2 {
-    font-size: 2rem;
-    font-weight: 400;
-    margin: 0;
-}
-@media (max-width: 600px) {
-    header h2 {
-        font-size: 1.5rem;
-    }
+.inner {
+  display: flex;
+  align-items: center; 
 }
 
-header ul {
+.nav {
+  display: flex;
+  align-items: center; 
+}
+
+h2 {
+    color:rgb(255, 255, 255);
+    text-decoration: none; 
+    margin: 0 20px; 
+    display: inline-block; 
+    margin-right: 20px;
+    font-size: 2.0rem;
+}
+
+nav ul {
     font-size: 20px;
     list-style: none;
     display: flex;
+    padding: 0;
+    margin: 0;
 }
 
-header ul a {
+nav ul a {
     color:white;
     text-decoration: none; 
     margin: 0 20px; 
     display: inline-block; 
-    
 }
 
+nav li {
+    margin-right: 10px; 
+}
+
+nav li:last-child {
+    margin-right: 0; /* 最後のメニューアイテムのスペースを削除 */
+}
+  
+
+
+@media (max-width: 767px) {
+    nav {
+        position: fixed;
+        width: 100%;
+        top: 100px;
+        left: -100vw;
+        bottom: 0;
+        transition: all 0.5s;
+        z-index: 3;
+        opacity: 0;
+        justify-content: center; /* 水平方向の中央揃え */
+        align-items: center; /* 垂直方向の中央揃え */
+        height: 100vh;
+        display: flex;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* 水平方向の中央揃え */
+        align-items: center;
+        list-style: none; 
+        padding: 0;
+        margin: 0;
+    }
+
+    .open nav {
+        left: 0;
+        opacity: 1;
+    }
+
+    .inner {
+        padding: 25px;
+    }
+
+    .inner ul li {
+        margin: 0;
+        border-bottom: 10px;
+        text-align: center; /* テキストを中央揃え */
+    }
+
+    .inner ul li a {
+        display: block;
+        color:rgb(255, 255, 255);
+        font-size: 48px;
+        padding: 1rem;
+        text-decoration: none;
+        transition-duration: 0.2s;
+    }
+
+    .inner ul li a:hover {
+        background: #e4e4e4;
+    }
+
+    .toggle-btn {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 30px;
+        width: 30px;
+        height: 30px;
+        z-index: 3;
+        cursor: pointer;
+    }
+
+    .toggle-btn span {
+        position: absolute;
+        display: block;
+        left: 0;
+        width: 30px;
+        height: 2px;
+        background-color: #ffffff;
+        transition: all 0.5s;
+        border-radius: 4px;
+    }
+
+    .toggle-btn span:nth-child(1) {
+        top: 4px;
+    }
+    .toggle-btn span:nth-child(2) {
+        top: 14px;
+    }
+    .toggle-btn span:nth-child(3) {
+        bottom: 4px;
+    }
+
+    .open .toggle-btn span {
+        background-color: #ffffff;
+    }
+
+    .open .toggle-btn span:nth-child(1) {
+        transform: translateY(10px) rotate(-315deg);
+    }
+
+    .open .toggle-btn span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .open .toggle-btn span:nth-child(3) {
+        transform: translateY(-10px) rotate(315deg);
+    }
+
+    #mask {
+        opacity: 0;
+        transform: translateX(-100%);
+        background: #349cb8;
+        width: 100%;
+        height: 100vh;
+        top: 60px;
+        left: 0px;
+        position: fixed;
+        z-index: 2;
+        cursor: pointer;
+        backdrop-filter: blur(100vh);
+        transition: all 0.5s;
+    }
+
+    .open #mask {
+        display: block;
+        background: #349cb8;
+        width: 100%;
+        height: 100vh;
+        top: 60px;
+        left: 100%;
+        opacity: 0.8;
+        z-index: 2;
+        cursor: pointer;
+        backdrop-filter: blur(100vh);
+    }
+}

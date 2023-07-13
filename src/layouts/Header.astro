@@ -1,17 +1,41 @@
 <header class="header">
-    <div class="logo-title">
-        <h2>Sakasu's Note</h2>
+    <div id="navArea">
+        <div class="inner">
+            <h2>Sakasu's Note</h2>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/algo">Algo</a></li>
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+
+  
+        <div class="toggle-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+  
+        <div id="mask"></div>
     </div>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/algo">Algo</a></li>
-            <li><a href="/profile">Profile</a></li>
-            <li><a href="/blog">Blog</a></li>
-        </ul>
-    </nav>
+  
+
+    <script src = "../utils/hamburger.js"> </script>
+
+    
 </header>
 
 <style lang="scss">
   @import "../styles/_header.scss";
+
+  
+    main {
+        padding: 50px;
+    }
+
+ 
+
 </style>
