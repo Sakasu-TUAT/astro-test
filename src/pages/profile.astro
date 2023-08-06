@@ -40,19 +40,15 @@ import SimpleIcons from '../components/sns_icons_simple.astro';
                     <div class="labelFontUpper">過去最高気温</div><!---->
                     <div class="valueFont"><div style="direction: ltr">36°</div>&nbsp;<!---->(2018)</div></div></div></div> <!----><div class="tempItem" style="top:32px"><div class="tempItem-content"><div class="tempItem-content-container"><div class="labelFontUpper">アベレージ ハイ</div><!----><div class="valueFont"><div style="direction: ltr">30°</div></div></div></div></div></div></div>
                     <div class="tempItem-content-container">
-            </div>
-                                        
-            <SimpleIcons />
-        </Layout>
+        </div>                          
+    <SimpleIcons />
+</Layout>
                                     
 <style>
-    body {
-        background-color: #1e4267;
-    }
     .container {
         position: relative;
-        margin: 30%;
-        transform: translateY(-30%);
+        margin-left: 30%;
+        margin-top: 15%;
         text-align: center;
         color-scheme: light dark;
         color: white;
@@ -72,5 +68,6 @@ import SimpleIcons from '../components/sns_icons_simple.astro';
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
+        height: 100%;
     }
 </style>

@@ -1,11 +1,17 @@
 footer {
     background-color: black;
-    padding: 20px;
     text-align: center;
     width: 100%;
+    // min-height: 100vh;
+    position: relative;/*←相対位置*/
+    padding-bottom: 50px;/*←footerの高さ*/
+    box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
 }
 
 .footer-content {
     font-size: 14px;
     color: #ffffff;
+    position: absolute;/*←絶対位置*/
+    bottom: 0; /*下に固定*/
+    width: 100%;
 }
