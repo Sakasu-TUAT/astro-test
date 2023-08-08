@@ -43,8 +43,8 @@ const { title } = Astro.props;
 		background-image: url("/kirakira.jpeg");
 		background-size: cover;
 		background-repeat: no-repeat;
-   		background-attachment: fixed;         /* 固定 */
-   		background-position: center;   /* 縦横中央 */
+   		background-attachment: fixed; 
+   		background-position: center;   
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -54,11 +54,9 @@ const { title } = Astro.props;
 	}
 	.bg::before{
 		content: '';
-		/* ↓暗いオーバーレイを半透明で配置 */
-		background-color: rgba(0, 0, 0, 0.6);
+		background-color: rgba(0, 0, 0, 0.8);
 		/* ↓全体を覆うように配置 */
 		position: absolute;
-		/* filter: blur(1px); */
 		top: 0;
 		left: 0;
 		width: 100%;

@@ -11,7 +11,6 @@ import SimpleIcons from '../components/sns_icons_simple.astro';
                 <p>問題置き場にする(?)</p>
             </div>
 
-
             <section class="algorithm-list">
                     <!-- <summary>  -->
                     <h2>動的計画法 (Dynamic Programming, DP)</h2> 
@@ -27,54 +26,11 @@ import SimpleIcons from '../components/sns_icons_simple.astro';
                         <!-- <p>ソースコード</p> -->
                         <!-- <script src="https://gist.github.com/Sakasu-TUAT/714e8c0fb41c944f7f9ec520f397704f.js"></script>                     -->
                         <pre><code>
-                                &lt;script&gt;
-                                    console.log("コードを表示させてみました");
-                                &lt;/script&gt;
+&lt;script&gt;
+    console.log("コードを表示させてみました");
+&lt;/script&gt;
                         </code></pre>                
                     </class>
-
-                    <class class="source_code">
-                        <pre><code>
-                                #include &lt;iostream&gt;
-                                #include &lt;iostream&gt;
-                                #include &lt;vector&gt;
-                                using namespace std;
-                                using Graph = vector&lt;vector&lt;int&gt;&gt;;
-
-                                // 深さ優先探索
-                                vector&lt;bool&gt; seen;
-                                void dfs(const Graph &amp;G, int v) &#123;
-                                    seen[v] = true; // v を訪問済にする
-
-                                    // v から行ける各頂点 next_v について
-                                    for (auto next_v : G[v]) &#123;
-                                        if (seen[next_v]) continue; // next_v が探索済だったらスルー
-                                        dfs(G, next_v); // 再帰的に探索
-                                    &#125;
-                                &#125;
-
-                                int main() &#123;
-                                    // 頂点数と辺数
-                                    int N, M; cin &gt;&gt; N &gt;&gt; M;
-
-                                    // グラフ入力受取 (ここでは無向グラフを想定)
-                                    Graph G(N);
-                                    for (int i = 0; i &lt; M; ++i) &#123;
-                                        int a, b;
-                                        cin &gt;&gt; a &gt;&gt; b;
-                                        G[a].push_back(b);
-                                        G[b].push_back(a);
-                                    &#125;
-
-                                    // 頂点 0 をスタートとした探索
-                                    seen.assign(N, false); // 全頂点を「未訪問」に初期化
-                                    dfs(G, 0);
-                                &#125;
-                        </code></pre>    
-                    </class>
-
-                               
-                    </code></pre>
 
                     <h2 class="article-heading">midashi</h2>
                     <ol>
@@ -82,32 +38,78 @@ import SimpleIcons from '../components/sns_icons_simple.astro';
                         <li><a href="algorithm2.html">アルゴリズム2の説明</a></li>
                         <li><a href="algorithm3.html">アルゴリズム3の説明</a></li>
                     </ol>
+
+            <class class="source_code">
+                <pre>
+                    <code>
+#include &lt;iostream&gt;
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+using Graph = vector&lt;vector&lt;int&gt;&gt;;
+
+// 深さ優先探索
+vector&lt;bool&gt; seen;
+void dfs(const Graph &amp;G, int v) &#123;
+    seen[v] = true; // v を訪問済にする
+
+    // v から行ける各頂点 next_v について
+    for (auto next_v : G[v]) &#123;
+        if (seen[next_v]) continue; // next_v が探索済だったらスルー
+        dfs(G, next_v); // 再帰的に探索
+    &#125;
+&#125;
+                    </code>
+                </pre>    
+            </class>
             </section>
-     
         </div>
+
         <SimpleIcons />
 </Layout>
 
 <style> 
     .source_code {
-        background-color: #22242a;
+        background-color: #050a16; 
         border-radius: 5px;
-        padding: 1rem;
-        margin: 1rem 0;
         display:flex;
         color: rgb(255, 255, 255);
-        border: 5px solid rgb(225, 203, 79); 
+        border: 5px solid rgb(79, 225, 225); 
         border-radius: 15px; 
         opacity: 0.9; 
-        /* text-align: left;  */
+        height: 100%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        overflow-x: auto;
+        /* padding: 0.1rem;  */
     }
 
     .source_code code {
         display: block;
+        padding: 0;
+        z-index: 2;
+        -webkit-overflow-scrolling: touch; 
+        color: rgb(255, 255, 255);  
+    } 
+
+    pre {
+        margin: 0;
+        /* background-color: #000000;
+        border: 1px solid #ccc; */
+        display: flex; 
         white-space: pre-wrap;
-        position: relative;
-        margin-left: -20%;
-        height: 100%;
+        padding: 1em 1.5em; 
+    }
+
+    code {
+        white-space: pre-wrap;
+        overflow-x: auto;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        white-space: pre-wrap;
+        flex-grow: 1; 
+        margin: 0; 
     }
 
     .article {
