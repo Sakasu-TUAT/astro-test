@@ -91,8 +91,8 @@ import SimpleIcons from '../img/sns_icons_simple.astro';
 <script>    
     import { customScrollReveal } from '/src/utils/scroll.js'; // 関数をインポート
     const containerOptions = {
-        delay: 400,
-        origin: "left"
+        delay: 200,
+        origin: "bottom"
     };
     customScrollReveal('.content', containerOptions); // インポートした関数を使用
 </script>
@@ -263,6 +263,16 @@ import SimpleIcons from '../img/sns_icons_simple.astro';
             background: #3b7a9e1a;
             backdrop-filter: blur(20px);   
             transform: translate(5%, -50%); 
+        }
+
+        .sec-02 .content .text-box {
+            backdrop-filter: blur(60px);    
+            width: 60%; 
+            height: 20%;
+            transform: translate(0%, 120%);    
+        }
+        .sec-03 .content .text-box h3 { 
+            font-size: 2em;   
         }
 
         .sec-04 .content .text-box {
