@@ -1,73 +1,206 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import '../styles/algo.scss';
-import SimpleIcons from '../components/sns_icons_simple.astro';
+import SimpleIcons from '../img/sns_icons_simple.astro';
+// import { customScrollReveal } from "../../components/Scroll";
+---
 
 ---
 
 <Layout title="Profile">
-    <div class="container">
-        <h1>Under Construction</h1>
-        <h1>Comming Soon !!</h1>
-        <div class="historical-temperature-container">
-            <!----><a class="forecast-history-link" 
-            target="_blank" 
-            data-t="{&quot;n&quot;:&quot;recordsPageLink&quot;,&quot;a&quot;:&quot;click&quot;,&quot;b&quot;:1}" 
-            href="https://www.msn.com/ja-jp/weather/records/in-%E6%9D%B1%E4%BA%AC%E9%83%BD,%E7%9B%AE%E9%BB%92%E5%8C%BA?loc=eyJsIjoi55uu6buS5Yy6IiwiciI6IuadseS6rOmDvSIsImMiOiLml6XmnKwiLCJpIjoiSlAiLCJnIjoiamEtanAiLCJ4IjoiMTM5LjY2OTI5NjI2NDY0ODQ0IiwieSI6IjM1LjYxODY4NjY3NjAyNTM5In0%3D&amp;weadegreetype=C&amp;ocid=msedgntp&amp;cvid=9794b615734945d7803626a1d29eba50&amp;ei=51">
-        </a> <!---->
+    <div class="wrapper">
 
-        <div class="container-title">
-            <span>7月14日 の気温の記録</span>
-            <svg width="7" height="14px" viewBox="0 0 7 12" xmlns="http://www.w3.org/2000/svg" 
-            class="inline-DS-EntryPoint1-1">
-            <path d="M0.528512 0.861886C0.268165 1.12224 0.268165 1.54435 0.528512 1.8047L4.72379 5.99996L0.528512 10.1952C0.268165 10.4556 0.268165 10.8777 0.528512 11.138C0.788865 11.3984 1.21097 11.3984 1.47133 11.138L6.13799 6.47136C6.39832 6.21103 6.39832 5.78889 6.13799 5.52856L1.47133 0.861886C1.21097 0.601539 0.788865 0.601539 0.528512 0.861886Z" fill="white">
-                </path></svg></div> <!----><div class="container-content">
-                    <img src="https://assets.msn.com/weathermapdata/1/static/background/aurora/temperature_record.svg"><!---->
-                <div class="tempItem" style="top:119px">
-                <div class="tempItem-content">
-                    <div class="labelFontUpper">過去最低気温</div><!---->
-                    <div class="valueFont">
-                    <div style="direction: ltr">19°</div>
-                    &nbsp;<!---->(1998)</div></div></div></div> <!---->
-                    <div class="tempItem" style="top:96px">
-                    <div class="tempItem-content">
-                    <div class="tempItem-content-container">
-                    <div class="labelFontUpper">平均最低気温</div>
-                    <!----><div class="valueFont">
-                    <div style="direction: ltr">24°</div></div></div></div></div> <!---->
-                    <div class="tempItem" style="top:6px">
-                    <div class="tempItem-content"><div class="tempItem-content-container">
-                    <div class="labelFontUpper">過去最高気温</div><!---->
-                    <div class="valueFont"><div style="direction: ltr">36°</div>&nbsp;<!---->(2018)</div></div></div></div> <!----><div class="tempItem" style="top:32px"><div class="tempItem-content"><div class="tempItem-content-container"><div class="labelFontUpper">アベレージ ハイ</div><!----><div class="valueFont"><div style="direction: ltr">30°</div></div></div></div></div></div></div>
-                    <div class="tempItem-content-container">
-        </div>                          
-    <SimpleIcons />
+         <!-- section01 -->
+        <section class="sec-01">
+            <div class="container">
+                <!-- <h2 class="main-title">Haribote</h2> -->
+                <div class="content">
+                    <div class="image">
+                    <img src="kirakira.jpeg" alt="" />
+                    </div>
+                    <div class="text-box">
+                    <h3> I am a ... </h3>
+                    <p>
+                        I'm a student at the University of Tokyo. <br>
+                        I'm interested in the field of computer science, especially in the field of machine learning and computer vision.
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec-02">
+            <div class="container">
+                <!-- <h2 class="main-title">Haribote</h2> -->
+                <div class="content">
+                    <div class="image">
+                    <img src="robocon_kanban.jpg" alt="" />
+                    </div>
+                    <div class="text-box">
+                    <h3> RoboCon </h3>
+                    <p>
+                        
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+
+
+
+    <SimpleIcons />    
 </Layout>
-                                    
+
+<script>    
+    import { customScrollReveal } from '/src/utils/scroll.js'; // 関数をインポート
+    const containerOptions = {
+        delay: 400,
+        origin: "left"
+    };
+    customScrollReveal('.content', containerOptions); // インポートした関数を使用
+</script>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+ 
 <style>
-    .container {
-        position: relative;
-        margin-left: 30%;
-        margin-top: 15%;
-        text-align: center;
+    .wrapper {
+        /* text-align: center; */
         color-scheme: light dark;
         color: white;
+        width: 95%;
+        border: 1px solid red; 
+        margin: 10% auto;
+    }
+
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        padding: 10% 0;  
+        color: #fff;
+        width: 100%; 
+        height: 700px;
+    } 
+
+    .container {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        flex-direction: column;
+        border: 5px solid blue;
+        width: 100%; 
+        height: 100%;
+    }
+
+
+    .main-title {
+        font-size: 4rem;
+        margin-bottom: 50px;
+    }
+
+    .content {
+        display: flex; 
+        justify-content: center;
+        align-items: center; 
+        border: rgb(101, 186, 16) 10px solid;
+        width: 100%;
+        height: 100%;  
+        overflow: hidden; 
+    }
+
+    .content .image {
+        position: absolute;
+        left: 0%;
+        width: 100%; 
+        height: 100%;
+        border-radius: 10px;
+        z-index: 10;
+    }
+
+    .content .image img {
+        width: 100%; 
+        height: 100%;    
+        object-fit: cover;
+        border-radius: 10px;
+        z-index: 10;
+    }
+
+    .content .text-box {
+        position: absolute;
+        z-index: 20;
+        background: #1a21251a;
+        backdrop-filter: blur(60px); 
+        padding: 20px;
+        width: 45%; 
+        height: 30%;
+        max-width: 400px;
+        max-height: 600px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        transform: translate(35%, 40%);
+    }
+
+    .content .text-box h3 {
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+
+    .content .text-box p {
+        font-size: 1.2em;  
+    }
+
+    .section-title {
+        font-size: 3em; 
+        margin-bottom: 80px;
+    }
+
+    .info-title {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+    }
+
+    .info {
+        width: 700px;
+        margin-left: 50px;
     }
 
     .container h1 + h1 {
         margin-top: 20px; /* 上側のマージンを20pxに設定 */
     }
 
-    .historical-temperature-container {
-        position: relative;
-        width: 300px;
-        height: 270px;
-        background: rgba(255, 255, 255, 0.04);
-        border-radius: 8px;
-        padding: 12px 0px;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
+    @media screen and (max-width: 768px){ 
+        .content .text-box {
+            padding: 20px;
+            width: 70%; 
+            height: 25%;
+            max-width: 300px; 
+            max-height: 300px;
+            transform: translate(-10%, 40%); 
+            text-align: left;
+        }
+        .content .text-box h3 { 
+            font-size: 3em;  
+            margin-bottom: 10px;
+        }
+        .content .text-box p {
+            font-size: 1.2em;  
+        }
+        .wrapper {
+            width: 100%;
+        }
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 0;  
+            color: #fff;
+            width: 100%; 
+            height: 700px;
+        } 
     }
+
+
 </style>

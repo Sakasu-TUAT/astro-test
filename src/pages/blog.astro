@@ -4,7 +4,7 @@ import '../styles/_blog_pages.scss';
 import { newtClient } from '../lib/newt';
 import type {Article} from '../lib/newt';
 import { getFormattedDate } from '../utils/formatDate';
-import Icons from '../components/sns_icons.astro';
+import Icons from '../img/sns_icons.astro';
 
 const { items: articles } = await newtClient.getContents<Article>({
     appUid: 'astro_blog',
