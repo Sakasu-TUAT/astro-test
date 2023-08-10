@@ -21,8 +21,8 @@ import SimpleIcons from '../img/sns_icons_simple.astro';
                     <div class="text-box">
                     <h3> I am a ... </h3>
                     <p>
-                        I'm a student at the University of Tokyo. <br>
-                        I'm interested in the field of computer science, especially in the field of machine learning and computer vision.
+                        I am enrolled as a student at TUAT, 
+                        where my focus lies in the dynamic realm of CS.
                     </p>
                     </div>
                 </div>
@@ -34,12 +34,46 @@ import SimpleIcons from '../img/sns_icons_simple.astro';
                 <!-- <h2 class="main-title">Haribote</h2> -->
                 <div class="content">
                     <div class="image">
-                    <img src="robocon_kanban.jpg" alt="" />
+                    <img src="kanban.jpg" alt="" />
                     </div>
                     <div class="text-box">
-                    <h3> RoboCon </h3>
-                    <p>
-                        
+                    <h3> Robotics </h3>
+                    <p> 
+                        I've been working on controlling robots with LiDAR
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec-03">
+            <div class="container">
+                <!-- <h2 class="main-title">Haribote</h2> -->
+                <div class="content">
+                    <div class="image">
+                    <img src="programming-code-abstract-technology-background-of-software-developer-and-computer-script.avif" alt="" />
+                    </div> 
+                    <div class="text-box">
+                    <h3> Programming </h3>
+                    <p> 
+                        KeyWords: C++, Python, Astro, AtCoder, ICPC, etc... 
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec-04">
+            <div class="container">
+                <!-- <h2 class="main-title">Haribote</h2> -->
+                <div class="content">
+                    <div class="image">
+                    <img src="space_01.jpg" alt="" />
+                    </div>
+                    <div class="text-box">
+                    <h3> Stargazer </h3>
+                    <p> 
+                        "Finding solace in gazing at the stars."
                     </p>
                     </div>
                 </div>
@@ -131,17 +165,40 @@ import SimpleIcons from '../img/sns_icons_simple.astro';
     .content .text-box {
         position: absolute;
         z-index: 20;
-        background: #1a21251a;
+        background: #3b7a9e1a;
         backdrop-filter: blur(60px); 
         padding: 20px;
         width: 45%; 
-        height: 30%;
+        height: 20%;
         max-width: 400px;
         max-height: 600px;
         border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 10px;
         transform: translate(35%, 40%);
+    }       
+
+    .sec-02 .content .text-box {
+        background: #1d8d36;
+        backdrop-filter: blur(60px);    
+        width: 35%; 
+        height: 20%;
+        max-width: 400px;
+        max-height: 600px;
+        transform: translate(-45%, 120%);
     }
+
+    
+    .sec-04 .content .text-box {
+        background: #3b7a9e1a;
+        backdrop-filter: blur(3px);   
+        transform: translate(35%, -50%); 
+    }
+
+    .content .text-box p {
+        font-size: 1.2em;  
+        font-family: Raleway,sans-serif;
+    }
+
 
     .content .text-box h3 {
         font-size: 3em;
@@ -173,20 +230,22 @@ import SimpleIcons from '../img/sns_icons_simple.astro';
 
     @media screen and (max-width: 768px){ 
         .content .text-box {
-            padding: 20px;
+            padding: 25px;
             width: 70%; 
-            height: 25%;
+            height: 20%;  
             max-width: 300px; 
             max-height: 300px;
             transform: translate(-10%, 40%); 
             text-align: left;
+            overflow: hidden;
         }
         .content .text-box h3 { 
-            font-size: 3em;  
+            font-size: 3em;   
             margin-bottom: 10px;
         }
         .content .text-box p {
-            font-size: 1.2em;  
+            font-size: 1.1em;
+            margin-bottom: 50px;     
         }
         .wrapper {
             width: 100%;
@@ -200,6 +259,17 @@ import SimpleIcons from '../img/sns_icons_simple.astro';
             width: 100%; 
             height: 700px;
         } 
+        .sec-01 .content .text-box {
+            background: #3b7a9e1a;
+            backdrop-filter: blur(20px);   
+            transform: translate(5%, -50%); 
+        }
+
+        .sec-04 .content .text-box {
+            background: #3b7a9e1a;
+            backdrop-filter: blur(3px);   
+            transform: translate(15%, -50%); 
+        }
     }
 
 
