@@ -2,17 +2,20 @@
 @import "./article_header";
 
 .container {
-    position: relative;
+    margin: 0 auto; 
     margin-top: 100px;
-    margin-left: 5%;
-    margin-right: 5%;
+    width: 80%; 
     text-align: center;
     color: #ffffff;
     margin-bottom: 100px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80vw;
 }
+
+@media screen and (max-width: 768px){ 
+    .container {
+        width: 98%; 
+    }
+}
+
 .container img {
     position: relative;
     left: 50%;
