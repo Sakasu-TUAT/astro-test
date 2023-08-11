@@ -28,6 +28,12 @@ import SimpleIcons from '../img/sns_icons_simple.astro';
                 </div>
             </div>
         </section>
+        <svg class="arrows">
+            <path class="a1" d="M0 0 L30 32 L60 0"></path>
+            <path class="a2" d="M0 20 L30 52 L60 20"></path>
+            <path class="a3" d="M0 40 L30 72 L60 40"></path>
+        </svg>
+        <div class="spacer"></div>
 
         <section class="sec-02">
             <div class="container">
@@ -46,6 +52,13 @@ import SimpleIcons from '../img/sns_icons_simple.astro';
             </div>
         </section>
 
+        <svg class="arrows">
+            <path class="a1" d="M0 0 L30 32 L60 0"></path>
+            <path class="a2" d="M0 20 L30 52 L60 20"></path>
+            <path class="a3" d="M0 40 L30 72 L60 40"></path>
+        </svg>
+        <div class="spacer"></div>
+
         <section class="sec-03">
             <div class="container">
                 <!-- <h2 class="main-title">Haribote</h2> -->
@@ -62,6 +75,13 @@ import SimpleIcons from '../img/sns_icons_simple.astro';
                 </div>
             </div>
         </section>
+
+        <svg class="arrows">
+            <path class="a1" d="M0 0 L30 32 L60 0"></path>
+            <path class="a2" d="M0 20 L30 52 L60 20"></path>
+            <path class="a3" d="M0 40 L30 72 L60 40"></path>
+        </svg>
+        <div class="spacer"></div>
 
         <section class="sec-04">
             <div class="container">
@@ -105,7 +125,7 @@ import SimpleIcons from '../img/sns_icons_simple.astro';
         color-scheme: light dark;
         color: white;
         width: 95%;
-        border: 1px solid red; 
+        /* border: 1px solid red;  */
         margin: 10% auto;
     }
 
@@ -124,7 +144,7 @@ import SimpleIcons from '../img/sns_icons_simple.astro';
         justify-content: center; 
         align-items: center; 
         flex-direction: column;
-        border: 5px solid blue;
+        /* border: 5px solid blue; */
         width: 100%; 
         height: 100%;
     }
@@ -139,7 +159,8 @@ import SimpleIcons from '../img/sns_icons_simple.astro';
         display: flex; 
         justify-content: center;
         align-items: center; 
-        border: rgb(101, 186, 16) 10px solid;
+        border: rgb(16, 47, 186) 10px solid;
+        border-radius: 15px;
         width: 100%;
         height: 100%;  
         overflow: hidden; 
@@ -281,6 +302,62 @@ import SimpleIcons from '../img/sns_icons_simple.astro';
             transform: translate(15%, -50%); 
         }
     }
+
+
+.arrows {
+    position: absolute;
+    left: 50%;
+    width: 60px;
+    height: 72px; 
+    text-align: center; 
+    color: white; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}  
+ 
+.spacer {
+    height: 100px; /* 任意の間隔を指定 */ 
+} 
+
+.arrows path {;
+  stroke: #2994D1; 
+  fill: transparent; 
+  stroke-width: 10px;   
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+    0% {opacity:0}
+    40% {opacity:1}
+    80% {opacity:0}
+    100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+    0% {opacity:0}
+    40% {opacity:1}
+    80% {opacity:0}
+    100% {opacity:0}
+}
+
+.arrows path.a1 {
+  animation-delay:-1s;
+  -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+  animation-delay:-0.5s;
+  -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 { 
+  animation-delay:0s;
+  -webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
 
 
 </style>
